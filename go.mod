@@ -1,3 +1,7 @@
-module github.com/vyachik-trafic-obscura
+module github.com/VyacheslavKuchumov/vyachik-trafic-obscura
 
 go 1.25.5
+
+require github.com/songgao/water v0.0.0-20200317203138-2b4b6d7c09d8
+
+require golang.org/x/sys v0.39.0 // indirect
