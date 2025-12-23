@@ -13,7 +13,7 @@ func main() {
 	tunDev := tun.Create()
 	config := cmd.LoadConfig()
 
-	udp, err := transport.Listen(config.ListenPort)
+	udp, err := transport.Listen("0.0.0.0" + config.ListenPort)
 	if err != nil {
 		log.Fatal(err)
 	}
