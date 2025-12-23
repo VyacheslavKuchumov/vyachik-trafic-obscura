@@ -13,7 +13,7 @@ func main() {
 	tunDev := tun.Create()
 	config := cmd.LoadConfig()
 
-	udp, err := transport.Dial(config.ServerAddress + config.ListenPort)
+	udp, err := transport.Dial(config.ServerAddress + ":" + config.ListenPort)
 	if err != nil {
 		log.Fatal(err)
 	}

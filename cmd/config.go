@@ -9,8 +9,8 @@ type Config struct {
 	MTU           int
 }
 
-func LoadConfig() Config {
-	return Config{
+func LoadConfig() *Config {
+	return &Config{
 		ServerAddress: os.Getenv("SERVER_ADDRESS"),
 		EncryptionKey: []byte(os.Getenv("ENCRYPTION_KEY")),
 		ListenPort:    os.Getenv("LISTEN_PORT"),
