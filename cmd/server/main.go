@@ -26,6 +26,8 @@ func main() {
 			continue
 		}
 
+		log.Printf("Received %d encrypted bytes\n", n)
+
 		packet, err := crypto.Decrypt(config.EncryptionKey, buf[:n])
 		if err != nil {
 			continue

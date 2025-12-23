@@ -25,6 +25,7 @@ func main() {
 		if err != nil {
 			log.Fatal(err)
 		}
+		log.Printf("Read %d bytes from TUN\n", n)
 
 		encrypted, err := crypto.Encrypt(config.EncryptionKey, buf[:n])
 		if err != nil {
